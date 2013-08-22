@@ -1,0 +1,74 @@
+.header {
+    border-bottom-color: #FF9700;
+}
+.top {
+    position: relative;
+    width: 100%;
+    .top-wrapper {
+        padding: 12% 3%;
+    }
+}
+.top-left, .top-right {
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 25%;
+    color: #555;
+    h3 {
+        font: 1.4em 'Montserrat';
+        padding-bottom: 15%;
+    }
+    h5 {
+        font: 4.5em 'Bebas Neue';
+    }
+}
+.top-middle {
+    float: left;
+    text-align: center;
+    width: 50%;
+    .ball {
+        margin-top: 10%;
+        width: 120px;
+    }
+}
+.bottom {
+    position: relative;
+    margin-top: 70px;
+    .bottom-wrapper {
+        padding: 12% 3%;
+    }
+}
+.person {
+    position: relative;
+    padding: 50px 0;
+}
+.name, .fouls, .points, .assits, .steals {
+    float: left;
+    width: 17.5%;
+    text-align: center;
+
+}
+// .sep {
+//     margin-top: 10px;
+//     text-align: center;
+//     float: left;
+//     width: 5px;
+// }
+.fouls, .points, .assits {
+
+}
+.name {
+    margin-top: 25px;
+    color: #555;
+    width: 30%;
+    font: 1.2em 'Montserrat';
+}
+.record {
+    font: 1em 'Bebas Neue';
+}
+p {
+    font: 0.1em 'Novecento Wide';
+}
+.person img {
+    padding: 8% 0;
+}

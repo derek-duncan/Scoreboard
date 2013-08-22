@@ -1,0 +1,81 @@
+extends layout
+block headertitle
+    |Player - Game
+block content
+    script(type='text/javascript', src="../javascripts/p_game.js")
+    link(rel='stylesheet', href='../stylesheets/player_game.css')
+    .top.clearfix
+        h3.name Derek Duncan #32
+        br
+        img.divide(src="images/divider.png")
+        br
+        .team
+            h5.home OKC
+            p vs
+            h5.away NYC
+    .middle
+        .middle-wrap
+            - var wi = '60'
+            .sectioni
+                .a-points
+                    img.arrow1(src="../images/solid_arrow.png", width=wi)
+                    h6.record= 13
+                    p points
+                    img.arrow2(src="../images/border_arrow.png", width=wi)
+                .a-rebounds
+                    img.arrow1(src="../images/solid_arrow.png", width=wi)
+                    h6.record= 12
+                    p reb
+                    img.arrow2(src="../images/border_arrow.png", width=wi)
+                .a-assists
+                    img.arrow1(src="../images/solid_arrow.png", width=wi)
+                    h6.record= 3
+                    p assists
+                    img.arrow2(src="../images/border_arrow.png", width=wi)
+            br
+            .sectionii
+                .a-steals
+                    img.arrow1(src="../images/solid_arrow.png", width=wi)
+                    h6.record= 5
+                    p steals
+                    img.arrow2(src="../images/border_arrow.png", width=wi)
+                .a-turnover
+                    img.arrow1(src="../images/solid_arrow.png", width=wi)
+                    h6.record= 5
+                    p turnovers
+                    img.arrow2(src="../images/border_arrow.png", width=wi)
+                .a-turnover
+                    img.arrow1(src="../images/solid_arrow.png", width=wi)
+                    h6.record= 2
+                    p and-1
+                    img.arrow2(src="../images/border_arrow.png", width=wi)
+    .p-points
+    .p-content.clearfix#point
+        .p-wrap
+            .option: p 3 Pointer
+            .option: p Field Goal
+            .option: p Lay Up
+            .option: p Dunk
+    .p-content.clearfix#rebound
+        .p-wrap
+            .option: p Offensive
+            .option: p Defensive
+    .p-content.clearfix#assist
+        .p-wrap
+            .option: p David A.
+            .option: p Tanner F.
+            .option: p Caleb S.
+            .option: p Jacob M.
+            .option: p Jacob M.
+    .p-content.clearfix#steal
+        .p-wrap
+            .option: p Points off Assist
+            .option: p No Points
+    .p-content.clearfix#steal
+        .p-wrap
+            .option: p Points off Turnover
+            .option: p No Points
+    .p-content.clearfix#steal
+        .p-wrap
+            .option: p Made 1 Freethrow
+            .option: p Made 0 Freethrows

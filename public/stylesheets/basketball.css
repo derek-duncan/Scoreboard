@@ -1,0 +1,90 @@
+/* line 1, basketball.css.scss */
+.header {
+  border-bottom-color: #FF9700;
+}
+
+/* line 4, basketball.css.scss */
+.top {
+  position: relative;
+  width: 100%;
+}
+/* line 7, basketball.css.scss */
+.top .top-wrapper {
+  padding: 12% 3%;
+}
+
+/* line 11, basketball.css.scss */
+.top-left, .top-right {
+  position: relative;
+  text-align: center;
+  float: left;
+  width: 25%;
+  color: #555;
+}
+/* line 17, basketball.css.scss */
+.top-left h3, .top-right h3 {
+  font: 1.4em 'Montserrat';
+  padding-bottom: 15%;
+}
+/* line 21, basketball.css.scss */
+.top-left h5, .top-right h5 {
+  font: 4.5em 'Bebas Neue';
+}
+
+/* line 25, basketball.css.scss */
+.top-middle {
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+/* line 29, basketball.css.scss */
+.top-middle .ball {
+  margin-top: 10%;
+  width: 120px;
+}
+
+/* line 34, basketball.css.scss */
+.bottom {
+  position: relative;
+  margin-top: 70px;
+}
+/* line 37, basketball.css.scss */
+.bottom .bottom-wrapper {
+  padding: 12% 3%;
+}
+
+/* line 41, basketball.css.scss */
+.person {
+  position: relative;
+  padding: 50px 0;
+}
+
+/* line 45, basketball.css.scss */
+.name, .fouls, .points, .assits, .steals {
+  float: left;
+  width: 17.5%;
+  text-align: center;
+}
+
+/* line 60, basketball.css.scss */
+.name {
+  margin-top: 25px;
+  color: #555;
+  width: 30%;
+  font: 1.2em 'Montserrat';
+}
+
+/* line 66, basketball.css.scss */
+.record {
+  font: 1em 'Bebas Neue';
+}
+
+/* line 69, basketball.css.scss */
+p {
+  font: 0.1em 'Novecento Wide';
+}
+
+/* line 72, basketball.css.scss */
+.person img {
+  padding: 8% 0;
+}

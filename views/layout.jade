@@ -1,0 +1,20 @@
+doctype 5
+html
+  head
+    title= title
+    meta(name = "viewport", content = "initial-scale=1, maximum-scale=1")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    script(type="text/javascript", src="../javascripts/menu.js")
+  body
+    .header.clearfix
+      img#menu(src="../images/menu_icon.png", width = 30)
+      h1
+        block headertitle
+    .wrapper
+      .menu
+        ul
+          li Hello
+          li Yo Bro
+      block content
