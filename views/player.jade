@@ -5,7 +5,7 @@ block content
     script(type='text/javascript', src="../javascripts/p_game.js")
     link(rel='stylesheet', href='../stylesheets/player_game.css')
     .top.clearfix
-        h3.name Derek Duncan #32
+        h3.name #{players[0].name} ##{players[0].height}
         br
         img.divide(src="images/divider.png")
         br
@@ -67,6 +67,7 @@ block content
             .option: p Caleb S.
             .option: p Jacob M.
             .option: p Jacob M.
+            .option: p
     .p-content.clearfix#steal
         .p-wrap
             .option: p Points off Assist
@@ -79,3 +80,26 @@ block content
         .p-wrap
             .option: p Made 1 Freethrow
             .option: p Made 0 Freethrows
+
+    h1 New Player
+    form(action="/player/new", method="post")
+      p
+        label Enter player's name:
+        input(type='text',placeholder='Kobe Bryant', name='player-name')
+      p
+        label Enter player's age:
+        input(type='text',placeholder='35', name='player-age')
+      p
+        label Enter player's height:
+        input(type='text',placeholder='6 5"', name='player-height')
+      p
+        label Enter player's weight:
+        input(type='text',placeholder='35lb', name='player-weight')
+      p
+        label Enter player's number:
+        input(type='text',placeholder='35lb', name='player-number')
+      p
+        input(type='submit', value='Save')
+    each player in players
+      each x in player
+        li #{x}

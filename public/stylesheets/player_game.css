@@ -1,9 +1,7 @@
-/* line 2, player_game.css.scss */
 .header {
   border: none;
 }
 
-/* line 5, player_game.css.scss */
 .top {
   background-color: #ffb300;
   *zoom: 1;
@@ -18,83 +16,67 @@
   padding: 10% 14px;
   text-align: center;
 }
-/* line 14, player_game.css.scss */
 .top .team {
   display: inline;
 }
-/* line 17, player_game.css.scss */
 .top .name {
   font: 1.3em 'Montserrat';
 }
-/* line 20, player_game.css.scss */
 .top .divide {
   padding: 3% 0;
 }
-/* line 23, player_game.css.scss */
 .top p {
   display: inline;
   font: 2em 'Novecento Wide';
 }
-/* line 27, player_game.css.scss */
 .top h5 {
   display: inline;
   font: 2.5em 'Novecento Wide Bold';
 }
-/* line 32, player_game.css.scss */
 .top .home {
   padding-right: 25px;
 }
-/* line 35, player_game.css.scss */
 .top .away {
   padding-left: 25px;
 }
 
-/* line 39, player_game.css.scss */
 .middle {
   position: relative;
 }
-/* line 41, player_game.css.scss */
 .middle .middle-wrap {
   padding: 10% 8%;
 }
-/* line 44, player_game.css.scss */
 .middle [class^="section"] {
   text-align: center;
   position: relative;
   padding-bottom: 120px;
 }
-/* line 49, player_game.css.scss */
 .middle [class^="a-"] {
   text-align: center;
   float: left;
   width: 33.3333%;
 }
-/* line 53, player_game.css.scss */
 .middle [class^="a-"] h6 {
   font: 1.7em 'Bebas Neue';
 }
-/* line 56, player_game.css.scss */
 .middle [class^="a-"] p {
   font: 0.6em 'Novecento Wide';
   padding-bottom: 6%;
 }
-/* line 60, player_game.css.scss */
 .middle [class^="a-"] img {
   padding: 20px;
   margin: -20px;
 }
-/* line 62, player_game.css.scss */
 .middle [class^="a-"] img:hover {
   opacity: 0.7;
 }
 
-/* line 68, player_game.css.scss */
 .p-points, .p-content {
   display: none;
 }
 
-/* line 71, player_game.css.scss */
 .p-points {
+  overflow: hidden;
   width: 100%;
   top: 0;
   left: 0;
@@ -102,28 +84,27 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* line 77, player_game.css.scss */
 .p-content {
+  overflow: hidden;
   position: absolute;
 }
 
-/* line 84, player_game.css.scss */
 .option {
+  float: left;
+  word-break: break-word;
   text-align: center;
   background: rgba(0, 0, 0, 0.9);
   color: #e1e1e1;
-  float: left;
   display: table;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-/* line 94, player_game.css.scss */
 .option:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 98, player_game.css.scss */
 .option p {
+  padding: 10px;
   font: 1.3em 'Novecento Wide Bold';
   display: table-cell;
   vertical-align: middle;

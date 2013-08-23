@@ -69,12 +69,14 @@
     display: none;
 }
 .p-points {
+    overflow: hidden;
     width: 100%;
     top: 0; left: 0;
     position: absolute;
     background: rgba(0, 0, 0, 0.2);
 }
 .p-content {
+    overflow: hidden;
     // width: 100%;
     position: absolute;
 }
@@ -82,11 +84,11 @@
     // padding: 10%;
 }
 .option {
-
+    float: left;
+    word-break: break-word;
     text-align: center;
     background: rgba(0, 0, 0, 0.9);
     color: #e1e1e1;
-    float: left;
     display: table;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -96,6 +98,7 @@
         background: rgba(0, 0, 0, 0.6);
     }
     p {
+        padding: 10px;
         font: 1.3em 'Novecento Wide Bold';
         display: table-cell;
         vertical-align: middle;

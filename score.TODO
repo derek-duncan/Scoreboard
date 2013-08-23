@@ -1,0 +1,32 @@
+File Structure:
+ ☐ Player
+   ☐ Name
+   ☐ Picture
+   ☐ Number
+   ☐ Height
+   ☐ Weight
+   ☐ Team Members
+ ☐ Season
+   ☐ Year
+   ☐ Team
+ ☐ Game
+   ☐ Opponent
+   ☐ Color
+   ☐ Stats
+     ☐ Points
+       ☐ Layup
+       ☐ Dunk
+       ☐ Field Goal
+       ☐ Three Point
+       ☐ Free Throw
+     ☐ Rebounds
+       ☐ Offensive
+       ☐ Defensive
+     ☐ Steals
+       ☐ Score
+       ☐ No Score
+     ☐ Turnovers
+       ☐ Opponent Score
+       ☐ Recover
+     ☐ Assists
+       ☐ Player

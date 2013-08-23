@@ -3,12 +3,12 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
-  , player = require('./routes/player')
-  , http = require('http')
-  , path = require('path');
+var express = require('express'),
+    routes = require('./routes/routes'),
+    http = require('http'),
+    path = require('path'),
+    redis = require('redis'),
+    db = redis.createClient();
 
 var app = express();
 
@@ -31,9 +31,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/player', player.player);
-console.log(__dirname);
-app.get('/users', user.list);
+app.get('/player', routes.player);
+app.post('/player/new', routes.newPlayer);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

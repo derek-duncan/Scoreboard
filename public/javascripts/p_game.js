@@ -1,65 +1,79 @@
-function global() {
-    var p = $('.p-content');
-    var o = $('.option');
-    var window = $(document).innerWidth();
-    $('.p-points').height($(document).height());
-    p.height($(document).innerWidth());
-    $('.option').each(function() {
-        $(this).css({'height': window / 2, 'width': window / 2});
+$.fn.popUpit = function(clickClass, mainClass, backgroundClass) {
+  var pcont = $(mainClass),
+      ppoint = $(backgroundClass),
+      op = $('.option'),
+      headerH = $('.header').innerHeight(),
+      doc = $(document),
+      docW = doc.innerWidth(),
+      docH = doc.innerHeight(),
+      win = $(window),
+      winH = win.innerHeight(),
+      winW = win.innerWidth(),
+      scrollTop = win.scrollTop(),
+      scrollLeft = win.scrollLeft(),
+      hover = 0,
+      body = $('body, html');
+  $(window).on('scroll', function() {
+    scrollTop = win.scrollTop();
+  });
+  ppoint.css({
+    height: docH,
+    window: "100%"
+  });
+  this.on('click', function(index) {
+    var dex = mainClass.eq(clickClass.index(this));
+    var pheight = (docW < 500) ? docW : "300px",
+        len = $(dex).find('.option').length;
+    if (len == 2) {
+      $(dex).find(op).each(function() {
+        $(this).width(docW / 2);
+        $(this).height(pheight);
+      });
+    }
+    else if (len > 2 && len <= 9) {
+      if (len % 2 === 0 && len <= 4) {
+        $(dex).find(op).each(function() {
+          $(this).width(docW / 2);
+          $(this).height(pheight / 2);
+        });
+      }
+      else if (len > 4) {
+        $(dex).find(op).each(function() {
+          $(this).width(docW / 3);
+          $(this).height(pheight / 2);
+        });
+      }
+    }
+    $(dex).height(pheight);
+    $(dex).css({
+      'top': '50%',
+      'margin-top': (- (winH - pheight + headerH) / 2 + scrollTop)
     });
 
-    $('.p-content').each(function(e, f) {
-        if ($(this).find('.option').length == 2){
-            $('.p-content').eq(e).find('.option').each(function(e, f){
-                $(this).css({'height': window, 'width': window / 2});
-            });
-        }
-        else if ($(this).find('.option').length > 4){
-            var len = $(this).find('.option').length;
-            if (len % 2 !== 0) {
-                $(this).find('.p-wrap').append('<div class="option"></div>');
-            }
-            $('.p-content').eq(e).find('.option').each(function(e, f){
-                $(this).css({'height': window / len * 2, 'width': window / 2});
-            });
-        }
-        $(this).css({'top':'50%', 'margin-top': - p.height() / 2});
-    });
-}
-function fadein(x) {
+    body.css({'overflow': 'visible', 'height':'100%'});
+    fadein(backgroundClass);
+    fadein(dex);
+    hover = 1;
+    if (hover == 1) {
+      $(backgroundClass).click(function() {
+        body.css('overflow', 'visible');
+        fadeout($(mainClass));
+        fadeout($(backgroundClass));
+        hover = 0;
+      });
+    }
+  });
+  function fadein(x) {
     x.fadeIn(200, function() {
-        x.css({'display': 'block'});
+      x.css({'display': 'block'});
     });
-}
-function fadeout(x) {
+  }
+  function fadeout(x) {
     x.fadeOut(200, function() {
-        x.css({'display': 'none'});
+      x.css({'display': 'none'});
     });
-}
+  }
+};
 $(function() {
-    global();
-    var hover = 0;
-    var body = $('body, html');
-    $('.arrow1').click(function() {
-        // Arrow Button
-        var e = $('.arrow1').index(this);
-        // Disable Vertical Scrolling
-        body.css({'overflow': 'hidden', 'height':'100%'});
-        // Fade in overlay background
-        fadein($('.p-points'));
-        // Fade in overlay content
-        fadein($('.p-content').eq(e));
-        hover = 1;
-        if (hover == 1) {
-            $('.p-points').click(function() {
-                body.css('overflow', 'auto');
-                fadeout($('.p-content'));
-                fadeout($('.p-points'));
-                hover = 0;
-            });
-        }
-    });
-});
-$(window).resize(function() {
-    // global();
+  $('.arrow1').popUpit($('.arrow1'), $('.p-content'), $('.p-points'));
 });
