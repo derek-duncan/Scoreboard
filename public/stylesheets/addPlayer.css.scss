@@ -1,0 +1,42 @@
+.bottomcont {
+    padding: 1% 10% 6%;
+    font: 1em 'Helvetica';
+    b {
+        font-weight: 800;
+    }
+    li {
+        list-style-type: none;
+        font: 300 1.3em "Helvetica";
+        text-transform: capitalize;
+    }
+    hr {
+        margin: 3% 0;
+        border-color: #fcfcfc;
+    }
+}
+.signup {
+    p {
+        margin: 4% 0;
+    }
+    input {
+        -webkit-appearance: none;
+        border-radius: none;
+        outline: none;
+        padding: 3%;
+        margin-top: 2%;
+        background: #fff;
+        border: 1px solid #b3b3b3;
+        &:focus {
+            border-color: #767676;
+        }
+    }
+    input[type="text"] {
+        width: 90%;
+    }
+    input[type="submit"] {
+        cursor: pointer;
+        &:hover {
+            background: #f2f2f2;
+        }
+    }
+}

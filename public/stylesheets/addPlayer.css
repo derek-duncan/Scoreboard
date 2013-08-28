@@ -1,0 +1,41 @@
+.bottomcont {
+  padding: 1% 10% 6%;
+  font: 1em 'Helvetica';
+}
+.bottomcont b {
+  font-weight: 800;
+}
+.bottomcont li {
+  list-style-type: none;
+  font: 300 1.3em "Helvetica";
+  text-transform: capitalize;
+}
+.bottomcont hr {
+  margin: 3% 0;
+  border-color: #fcfcfc;
+}
+
+.signup p {
+  margin: 4% 0;
+}
+.signup input {
+  -webkit-appearance: none;
+  border-radius: none;
+  outline: none;
+  padding: 3%;
+  margin-top: 2%;
+  background: #fff;
+  border: 1px solid #b3b3b3;
+}
+.signup input:focus {
+  border-color: #767676;
+}
+.signup input[type="text"] {
+  width: 90%;
+}
+.signup input[type="submit"] {
+  cursor: pointer;
+}
+.signup input[type="submit"]:hover {
+  background: #f2f2f2;
+}

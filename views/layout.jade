@@ -2,10 +2,12 @@ doctype 5
 html
   head
     title= title
-    meta(name = "viewport", content = "initial-scale=1, maximum-scale=1")
+    <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+    <meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
     meta(name="apple-mobile-web-app-capable", content="yes")
     link(rel='stylesheet', href='/stylesheets/style.css')
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    script(type="text/javascript", src="../javascripts/default.js")
     script(type="text/javascript", src="../javascripts/menu.js")
   body
     .header.clearfix
@@ -13,8 +15,9 @@ html
       h1
         block headertitle
     .wrapper
+      #flash-head #{error}
       .menu
         ul
-          li Hello
-          li Yo Bro
+          li: a(href="./game") New Game
+          li: a(href="./new") New Player
       block content

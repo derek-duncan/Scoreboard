@@ -1,1 +1,39 @@
-|I'm a new PLayer!
+extends layout
+block headertitle
+    |Player - New
+block content
+    link(rel='stylesheet', href='../stylesheets/addPlayer.css')
+    .bottomcont
+      h1: b New Player
+      form.signup(action="/player/add", method="post")
+        p
+          label Enter player's name: </br>
+          input(type='text',placeholder='Kobe Bryant', name='player-name')
+        p
+          label Enter player's age: </br>
+          input(type='text',placeholder='35', name='player-age')
+        p
+          label Enter player's height: </br>
+          input(type='text',placeholder='6 5"', name='player-height')
+        p
+          label Enter player's weight: </br>
+          input(type='text',placeholder='35lb', name='player-weight')
+        p
+          label Enter player's number: </br>
+          input(type='text',placeholder='15', name='player-number')
+        p
+          input(type='submit', value='Save')
+      each player in players
+        -if (player) {
+          -for(var key in player) {
+            -if (key == "name") {
+              li <b>Name: #{player[key]}</b>
+            -}
+            - else if (player[key] == "") {
+              li
+            -}
+            - else {
+              li #{key}: #{player[key]}
+            -}
+          -}
+        -}

@@ -1,15 +1,18 @@
-
 /**
  * Module dependencies.
  */
 
 var express = require('express'),
-    routes = require('./routes/routes'),
-    http = require('http'),
-    path = require('path'),
-    redis = require('redis'),
-    db = redis.createClient();
-
+  userings = require('./controllers.js'),
+  routes = require('./routes/routes'),
+  http = require('http'),
+  path = require('path'),
+  redis = require('redis'),
+  middleware = require('./controllers'),
+  db = redis.createClient();
+  db.on("error", function (err) {
+    console.log("Error " + err);
+  });
 var app = express();
 
 // all environments
@@ -25,15 +28,23 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-// development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+function loadUsers (req, res, next) {
+  return userings.openPlayers(function(ps) {
+    // console.log(ps);
+    req.user = ps[req.params.id - 1];
+    res.send(req.user);
+  });
+}
 
 app.get('/', routes.index);
-app.get('/player', routes.player);
-app.post('/player/new', routes.newPlayer);
+app.get('/player/game', routes.game);
+app.get('/player/new', routes.newPlayer);
+app.post('/player/add', routes.addPlayer);
+app.get('/player/game/:id', loadUsers);
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });

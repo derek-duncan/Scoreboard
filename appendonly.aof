@@ -1,0 +1,19 @@
+*2
+$6
+SELECT
+$1
+0
+*2
+$4
+incr
+$17
+global:nextUserId
+*4
+$4
+hset
+$7
+players
+$14
+1-Derek Duncan
+$84
+{"name":"Derek Duncan","age":"16","weight":"130lb","height":"5' 10\"","number":"32"}

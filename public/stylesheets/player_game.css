@@ -4,15 +4,10 @@
 
 .top {
   background-color: #ffb300;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFB300', endColorstr='#FF8ADBF2');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYjMwMCIvPjxzdG9wIG9mZnNldD0iMzklIiBzdG9wLWNvbG9yPSIjZmNkYzljIi8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNmZmM3NDQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4YWRiZjIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffb300), color-stop(39%, #fcdc9c), color-stop(70%, #ffc744), color-stop(100%, #8adbf2));
-  background-image: -webkit-linear-gradient(left, #ffb300 0%, #fcdc9c 39%, #ffc744 70%, #8adbf2 100%);
-  background-image: -moz-linear-gradient(left, #ffb300 0%, #fcdc9c 39%, #ffc744 70%, #8adbf2 100%);
-  background-image: -o-linear-gradient(left, #ffb300 0%, #fcdc9c 39%, #ffc744 70%, #8adbf2 100%);
-  background-image: linear-gradient(left, #ffb300 0%, #fcdc9c 39%, #ffc744 70%, #8adbf2 100%);
+  background: url(../images/basketball.png) no-repeat bottom;
+  background-position: -20% 160%;
+  background-size: 30%;
+  border-bottom: 1px solid #ccc;
   padding: 10% 14px;
   text-align: center;
 }
@@ -27,11 +22,11 @@
 }
 .top p {
   display: inline;
-  font: 2em 'Novecento Wide';
+  font: 1em 'Montserrat';
 }
 .top h5 {
   display: inline;
-  font: 2.5em 'Novecento Wide Bold';
+  font: 200 2.5em 'Novecento Wide';
 }
 .top .home {
   padding-right: 25px;
@@ -64,6 +59,7 @@
   padding-bottom: 6%;
 }
 .middle [class^="a-"] img {
+  cursor: pointer;
   padding: 20px;
   margin: -20px;
 }
@@ -85,8 +81,16 @@
 }
 
 .p-content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
+  width: 100%;
   position: absolute;
+}
+
+.p-wrap {
+  width: 101%;
 }
 
 .option {
@@ -96,8 +100,9 @@
   background: rgba(0, 0, 0, 0.9);
   color: #e1e1e1;
   display: table;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .option:hover {
   cursor: pointer;
@@ -108,4 +113,10 @@
   font: 1.3em 'Novecento Wide Bold';
   display: table-cell;
   vertical-align: middle;
+}
+
+.option:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
 }
